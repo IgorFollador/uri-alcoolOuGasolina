@@ -1,3 +1,4 @@
+import 'package:alcool_ou_gasolina/page2.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -75,6 +76,23 @@ class _HomeState extends State<Home> {
                     onPressed: _calcular,
                     child: Text(
                       "Calcular",
+                      style: TextStyle(fontSize: 22),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      elevation: 0,
+                      fixedSize: Size(220.0, 50.0),
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Page2()));
+                    },
+                    child: Text(
+                      "Nova Tela",
                       style: TextStyle(fontSize: 22),
                     ),
                   ),
